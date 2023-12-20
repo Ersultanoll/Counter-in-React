@@ -1,0 +1,32 @@
+@mixin button-size{
+  padding: 5px 10px;
+  border-radius: 5px;
+  .button-title{
+    font-size: 12px;
+  }
+}
+
+.button{
+  cursor: pointer;
+  background-color: #e1f5f3;
+  border: 2px solid #085698;
+
+  &:hover{
+    background-color: #6dacd0;
+  }
+
+  &:active{
+    background-color: #085698;
+    > .button-title{
+      color: #6dacd0;
+    }
+  }
+
+  .button-title{
+    color: #085698;
+  }
+}
+
+.button-size-sm{
+  @include button-size();
+}
